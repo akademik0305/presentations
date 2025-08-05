@@ -1,6 +1,6 @@
 <script setup lang="ts">
 //===============================-< set active color >-===============================
-const colors = ["#eb3b71", "#4f39f6", "#2A9D8F"];
+const colors = ["#4f39f6", "#2A9D8F", "#2563EB", "#10B981", "#F59E0B", "#E11D48" ];
 const activeColor = ref(colors[0]);
 //> variables
 //> functions

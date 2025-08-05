@@ -3,8 +3,8 @@ import { useAuthStore } from "./store/auth.store";
 
 //===============================-< seo >-===============================
 useSeoMeta({
-	title: "Smelio Clinic",
-	ogImage: "/icon.png",
+	title: "Taqdimotlar",
+	ogImage: "/favicon.ico",
 });
 
 //===============================-< imports >-===============================

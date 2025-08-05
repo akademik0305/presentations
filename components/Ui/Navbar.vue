@@ -8,7 +8,7 @@ const switchLocalePath = useSwitchLocalePath();
 // const router = useRouter()
 
 //utils
-const { locale,} = useI18n();
+const { locale } = useI18n();
 const router = useRouter();
 // const token = useToken()
 // const toast = useToast()
@@ -35,15 +35,6 @@ watch(currentLang, () => {
 	// setLocale(currentLang.value.toLowerCase() as TLocale)
 	router.push(switchLocalePath(currentLang.value.toLowerCase() as TLocale));
 });
-
-//===============================-< order create status >-===============================
-//> variables
-const isOpenOrder = useOrderStatus();
-//> functions
-const openOrder = () => {
-	isOpenOrder.value = true
-}
-
 
 //===============================-< fixed navbar and category >-===============================
 //> variables
@@ -101,15 +92,8 @@ onUnmounted(() => {
 					<div class="flex items-center gap-6 justify-between">
 						<!-- logo -->
 						<NuxtLink :to="localePath('/')" class="block">
-							<img
-								src="~/assets/images/logo/logo-nobg.png"
-								alt="logo"
-								class="w-full h-full max-h-14 object-cover"
-							/>
+							<h2 class="text-2xl text-main">Logo</h2>
 						</NuxtLink>
-					</div>
-					<!-- navbar right -->
-					<div class="flex items-center gap-6">
 						<!-- menu -->
 						<ul class="flex items-center gap-4">
 							<li class="relative group">
@@ -124,9 +108,9 @@ onUnmounted(() => {
 							</li>
 							<li class="relative group">
 								<NuxtLink
-									:to="localePath('/about')"
+									:to="localePath('/classes')"
 									class="font-medium text-text group-hover:text-main transition-colors duration-300"
-									>Klinika haqida</NuxtLink
+									>Fanlar</NuxtLink
 								>
 								<span
 									class="absolute bottom-0 left-0 w-full bg-main h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
@@ -134,38 +118,20 @@ onUnmounted(() => {
 							</li>
 							<li class="relative group">
 								<NuxtLink
-									:to="localePath('/services')"
+									:to="localePath('/sciences')"
 									class="font-medium text-text group-hover:text-main transition-colors duration-300"
-									>Xizmatlar</NuxtLink
+									>Sinflar</NuxtLink
 								>
 								<span
 									class="absolute bottom-0 left-0 w-full bg-main h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
 								/>
-							</li>
-							<li class="relative group">
-								<NuxtLink
-									:to="localePath('/employees')"
-									class="font-medium text-text group-hover:text-main transition-colors duration-300"
-									>Xodimlar</NuxtLink
-								>
-								<span
-									class="absolute bottom-0 left-0 w-full bg-main h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
-								/>
-							</li>
-							<li class="relative group">
-								<NuxtLink
-									:to="localePath('/contact')"
-									class="font-medium text-text group-hover:text-main transition-colors duration-300"
-									>Bog'lanish</NuxtLink
-								>
-								<span
-									class="absolute bottom-0 left-0 w-full bg-main h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
-								/>
-							</li>
-							<li class="relative">
-								<BaseButton text="Qabulga yozilish" @click="openOrder"/>
 							</li>
 						</ul>
+					</div>
+					<!-- navbar right -->
+					<div class="flex items-center gap-6">
+						<BaseButton text="Ro'yhatdan o'tish"  class="w-auto" />
+						<BaseButton text="Kirish" class="w-auto" />
 						<!-- language -->
 						<USelect
 							v-model="currentLang"
