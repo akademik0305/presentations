@@ -107,12 +107,14 @@ const bannersSwiper = useSwiper(bannersRef, {
 		<section class="pb-10">
 			<div class="container">
 				<div class="flex justify-center">
-					<h2 class="text-3xl text-center font-semibold">
+					<h2 class="text-2xl lg:text-3xl text-center font-semibold">
 						Fanlardan taqdimotlar
 					</h2>
 				</div>
 
-				<div class="mt-5 grid grid-cols-4 gap-4">
+				<div
+					class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+				>
 					<ScienceCard
 						v-for="item in 5"
 						:key="item"
@@ -127,17 +129,41 @@ const bannersSwiper = useSwiper(bannersRef, {
 		<section class="pb-10">
 			<div class="container">
 				<div class="flex justify-center">
-					<h2 class="text-3xl text-center font-semibold">
+					<h2 class="text-2xl lg:text-3xl text-center font-semibold">
 						Sinflarga taqdimotlar
 					</h2>
 				</div>
 
-				<div class="mt-5 grid grid-cols-4 gap-4">
+				<div
+					class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+				>
 					<ClassCard
 						v-for="item in 5"
 						:key="item"
 						:item="item"
 						:url="`/sciences/${item}?class=2-sinf`"
+					/>
+				</div>
+			</div>
+		</section>
+		<!-- classes -->
+		<!-- classes -->
+		<section class="pb-10">
+			<div class="container">
+				<div class="flex justify-center">
+					<h2 class="text-2xl lg:text-3xl text-center font-semibold">
+						Saytdan foydalanish bo'yicha video qo'llanma
+					</h2>
+				</div>
+
+				<div class="mt-5">
+					<iframe
+						src="https://www.youtube.com/embed/cp0iOk7TiXU?si=56WjIK0UXzgIs8s3"
+						title="YouTube video player"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+						class="w-full h-[60svh] rounded-xl overflow-hidden"
 					/>
 				</div>
 			</div>
