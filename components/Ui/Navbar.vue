@@ -108,7 +108,7 @@ onUnmounted(() => {
 							</li>
 							<li class="relative group">
 								<NuxtLink
-									:to="localePath('/classes')"
+									:to="localePath('/sciences')"
 									class="font-medium text-text group-hover:text-main transition-colors duration-300"
 									>Fanlar</NuxtLink
 								>
@@ -118,7 +118,7 @@ onUnmounted(() => {
 							</li>
 							<li class="relative group">
 								<NuxtLink
-									:to="localePath('/sciences')"
+									:to="localePath('/classes')"
 									class="font-medium text-text group-hover:text-main transition-colors duration-300"
 									>Sinflar</NuxtLink
 								>

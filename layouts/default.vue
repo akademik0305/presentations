@@ -30,7 +30,7 @@ async function submitOrder(data: { name: string; phone: string }) {
 					operatorlarimiz sizga aloqaga chiqishadi
 				</p>
 			</template>
-			<OrderCreate @success="submitOrder" />
+			<!-- <OrderCreate @success="submitOrder" /> -->
 		</BaseModal>
 		<!--===Modals===-->
 	</div>

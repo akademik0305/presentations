@@ -102,5 +102,46 @@ const bannersSwiper = useSwiper(bannersRef, {
 			</div>
 		</header>
 		<!-- banner -->
+
+		<!-- sciences -->
+		<section class="pb-10">
+			<div class="container">
+				<div class="flex justify-center">
+					<h2 class="text-3xl text-center font-semibold">
+						Fanlardan taqdimotlar
+					</h2>
+				</div>
+
+				<div class="mt-5 grid grid-cols-4 gap-4">
+					<ScienceCard
+						v-for="item in 5"
+						:key="item"
+						:item="item"
+						:url="`/classes/${item}?science=Matematika`"
+					/>
+				</div>
+			</div>
+		</section>
+		<!-- sciences -->
+		<!-- classes -->
+		<section class="pb-10">
+			<div class="container">
+				<div class="flex justify-center">
+					<h2 class="text-3xl text-center font-semibold">
+						Sinflarga taqdimotlar
+					</h2>
+				</div>
+
+				<div class="mt-5 grid grid-cols-4 gap-4">
+					<ClassCard
+						v-for="item in 5"
+						:key="item"
+						:item="item"
+						:url="`/sciences/${item}?class=2-sinf`"
+					/>
+				</div>
+			</div>
+		</section>
+		<!-- classes -->
 	</main>
 </template>
